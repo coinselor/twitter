@@ -10,21 +10,31 @@ body:
       label: Is there a Dicussion for this tweet?
       description: "Please [submit a discussion](https://github.com/coinselor/twitter/discussions) for this tweet before submitting this tweet proposal."
       options:
-        - label: "I have submitted a discussion for this tweet."
+        - label: "There is an existing discussion for this tweet."
           required: true
+
+   - type: input
+    id: discussion-link
+    attributes:
+      label: "Link to Discussion of Tweet Content"
+      description: "Provide a link to the GitHub Discussion related to this tweet."
+      placeholder: "https://github.com/coinselor/twitter/discussions/321"
+    validations:
+      required: true
+
           
   - type: markdown
     attributes:
-      value: "## Tweet Template Form\nFill out the details below for your tweet proposal."
+      value: "## Tweet Information\nFill out the details below for your tweet proposal."
 
   - type: dropdown
     id: tweet-date
     attributes:
-      label: "Date of Tweet"
-      description: "Choose if the tweet is scheduled or to be posted ASAP."
+      label: "When to tweet?"
+      description: "ASAP or Scheduled?"
       options:
+        - "As soon as possible"
         - "Scheduled (Specify Date Below)"
-        - "As Soon As Possible"
     validations:
       required: true
 
@@ -41,34 +51,49 @@ body:
     id: tweet-content
     attributes:
       label: "Content of the Tweet"
-      description: "Write the content of your tweet here."
+      description: "Write the primary content of the tweet here. Make sure it is less than 280 characters. [Try it out](https://twitter.com/compose/tweet)."
       placeholder: "Enter tweet content"
     validations:
       required: true
 
+   - type: checkbox
+  id: create-thread
+  attributes:
+    label: "Add a reply / Create a thread"
+    description: "Check this if the plan is to create a thread."
+    options:
+      - label: "Yes, I want to add another tweet as a reply."
+
+- type: textarea
+  id: additional-tweet-content
+  attributes:
+    label: "Additional Tweet Content"
+    description: "Write the content of your additional tweet for the thread here. (Optional)"
+    placeholder: "Enter additional tweet content. For multiple replies, separate each tweet with a line break including the characters '---'.
+    
+    Example:
+    This is the first reply
+    ---
+    This is the second reply"
+  validations:
+    required: false   
+
   - type: checkboxes
     id: tweet-media
     attributes:
-      label: "Tweet Media/Image"
-      description: "Select if there will be media or an image with the tweet."
+      label: "Does the tweet include media?"
+      description: "Check if there will be media or an image with the tweet."
       options:
         - label: "Yes"
-        - label: "No"
+          required: false
 
   - type: textarea
-    id: twitter-together-format
+    id: add-media
     attributes:
-      label: "Twitter-Together Formatted Tweet"
-      description: "Enter your formatted tweet following the twitter-together syntax."
-      placeholder: "Formatted tweet content"
-    validations:
-      required: true
-
-  - type: input
-    id: discussion-link
-    attributes:
-      label: "Link to Discussion of Tweet Content"
-      description: "Provide a link to the GitHub Discussion related to this tweet."
-      placeholder: "https://github.com/your-repo/discussions/123"
+      label: "Add media as an attachment"
+      description: "Click the paper clip icon (📎) to add a file"
+      placeholder: "📎"
     validations:
       required: false
+
+ 
