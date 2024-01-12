@@ -68,7 +68,7 @@ body:
     id: additional-tweet-content
     attributes:
       label: "Additional Tweet Content"
-      description: "Write the content of your additional tweet for the thread here. (Optional) For multiple replies, separate each tweet with a line break including the characters '---'. Example: This is the first reply --- This is the second reply"
+      description: "Write the content of your additional tweet for the thread here.\n(Optional)\nFor multiple replies, separate each tweet with a line break including the characters '---'. Example:\nThis is the first reply\n ---\nThis is the second reply"
       placeholder: "Enter additional tweet content"
     validations:
       required: false
@@ -85,7 +85,7 @@ body:
     id: add-media
     attributes:
       label: "Add media as an attachment"
-      description: "Click the paper clip icon (📎) to add a file"
-      placeholder: "📎"
+      description: "Click the paper clip icon (📎) to attach a file"
+      placeholder: "📎 -> Attach a file"
     validations:
       required: false
