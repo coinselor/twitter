@@ -10,7 +10,7 @@ jobs:
     if: contains(github.event.issue.labels.*.name, 'tweet')
     steps:
       - name: Add Issue to Project
-        uses: srggrs/assign-one-project-github-action@1.2.1
+        uses: srggrs/assign-one-project-github-action@1.3.1
         with:
           project: 'https://github.com/users/coinselor/projects/1'
           column_name: 'Draft Phase'
