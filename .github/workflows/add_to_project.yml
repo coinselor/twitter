@@ -15,4 +15,4 @@ jobs:
           project: 'https://github.com/users/coinselor/projects/1'
           column_name: 'Draft Phase'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MY_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
