@@ -67,9 +67,9 @@ body:
   - type: textarea
     id: additional-tweet-content
     attributes:
-      label: "Additional Tweet Content"
-      description: "Write the content of your additional tweet for the thread here.\n(Optional)\nFor multiple replies, separate each tweet with a line break including the characters '---'. Example:\nThis is the first reply\n ---\nThis is the second reply"
-      placeholder: "Enter additional tweet content"
+      label: "Additional Tweet Content "
+      description: "(Optional) Write the content of your additional tweet for the thread here. Make sure it is less than 280 characters. [Try it out](https://twitter.com/compose/tweet)."
+      placeholder: "For multiple replies, separate each tweet with a line break including the characters '---'. Example:\nThis is the first reply\n ---\nThis is the second reply"
     validations:
       required: false
 
