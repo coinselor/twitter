@@ -1,0 +1,18 @@
+name: Add to Project
+
+on:
+  issues:
+    types: [opened, labeled]
+
+jobs:
+  add-to-project:
+    runs-on: ubuntu-latest
+    if: contains(github.event.issue.labels.*.name, 'tweet')
+    steps:
+      - name: Add Issue to Project
+        uses: srggrs/assign-one-project-github-action@1.2.1
+        with:
+          project: '1'
+          column_name: 'Draft Phase'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
