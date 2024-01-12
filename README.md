@@ -17,9 +17,18 @@ The process is divided into three main steps:
 [🐦 Submit a Tweet Proposal](https://github.com/coinselor/twitter/issues/new/choose).
 
 ### Step 3: Creating a PR for the Tweet
-**Review Phase**: Thoroughly completed issues proceed to the Review Phase. Here, a pull request is created following the Twitter-together syntax. Once ready, it's merged back into the main [zenon-network/twitter](https://github.com/zenon-network/twitter) repository, making the tweet ready for publication by Zenon's repository maintainers.
+**Review Phase**: Once an issue is thoroughly detailed and ready for publication, it moves to the Review Phase. Here, a pull request is created following the Twitter-together syntax. Once ready, it's merged back into the main [zenon-network/twitter](https://github.com/zenon-network/twitter) repository, making the tweet ready for publication by Zenon's repository maintainers.
+
+If you are familiar with GitHub, especially the [twitter-together GitHub action and syntax](https://github.com/twitter-together/action), you are encouraged to create a pull request for the tweet.
+
+- **Branch Naming Convention**: Please use the naming convention `issue-[issue_number]` for your branch. For example, if you are addressing issue number 9, name your branch `issue-9`.
+
+[🔀 Create a Pull Request](https://github.com/coinselor/twitter/pulls)
 
 ## Join Us
+
 This is more than just a repository; it's a platform for every Zenon alien to contribute their unique voice. Your ideas, discussions, and contributions shape the Zenon evolution across social media.
+
+Contributions at this stage are immensely valuable and help ensure that our tweets reflect the collective voice of the Zenon community.
 
 _Zenon. Built by the Community._
