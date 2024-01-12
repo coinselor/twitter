@@ -1,0 +1,74 @@
+name: "🐦Submit a Tweet Proposal"
+description: "Propose tweets for @Zenon_Network feed."
+title: "[Enter Short Description]"
+labels: ["tweet"]
+assignees: []
+
+body:
+  - type: checkboxes
+    attributes:
+      label: Is there a Dicussion for this tweet?
+      description: "Please [submit a discussion](https://github.com/coinselor/twitter/discussions) for this tweet before submitting this tweet proposal."
+      options:
+        - label: "I have submitted a discussion for this tweet."
+          required: true
+          
+  - type: markdown
+    attributes:
+      value: "## Tweet Template Form\nFill out the details below for your tweet proposal."
+
+  - type: dropdown
+    id: tweet-date
+    attributes:
+      label: "Date of Tweet"
+      description: "Choose if the tweet is scheduled or to be posted ASAP."
+      options:
+        - "Scheduled (Specify Date Below)"
+        - "As Soon As Possible"
+    validations:
+      required: true
+
+  - type: input
+    id: scheduled-date
+    attributes:
+      label: "Scheduled Date"
+      description: "If scheduled, specify the date (YYYY-MM-DD). Leave blank if not applicable."
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: false
+
+  - type: textarea
+    id: tweet-content
+    attributes:
+      label: "Content of the Tweet"
+      description: "Write the content of your tweet here."
+      placeholder: "Enter tweet content"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: tweet-media
+    attributes:
+      label: "Tweet Media/Image"
+      description: "Select if there will be media or an image with the tweet."
+      options:
+        - label: "Yes"
+        - label: "No"
+
+  - type: textarea
+    id: twitter-together-format
+    attributes:
+      label: "Twitter-Together Formatted Tweet"
+      description: "Enter your formatted tweet following the twitter-together syntax."
+      placeholder: "Formatted tweet content"
+    validations:
+      required: true
+
+  - type: input
+    id: discussion-link
+    attributes:
+      label: "Link to Discussion of Tweet Content"
+      description: "Provide a link to the GitHub Discussion related to this tweet."
+      placeholder: "https://github.com/your-repo/discussions/123"
+    validations:
+      required: false
