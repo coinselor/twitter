@@ -6,14 +6,15 @@ assignees: []
 
 body:
   - type: checkboxes
+    id: discussion-check
     attributes:
-      label: Is there a Dicussion for this tweet?
+      label: "Is there a Discussion for this tweet?"
       description: "Please [submit a discussion](https://github.com/coinselor/twitter/discussions) for this tweet before submitting this tweet proposal."
       options:
         - label: "There is an existing discussion for this tweet."
           required: true
 
-   - type: input
+  - type: input
     id: discussion-link
     attributes:
       label: "Link to Discussion of Tweet Content"
@@ -22,7 +23,6 @@ body:
     validations:
       required: true
 
-          
   - type: markdown
     attributes:
       value: "## Tweet Information\nFill out the details below for your tweet proposal."
@@ -56,27 +56,22 @@ body:
     validations:
       required: true
 
-   - type: checkbox
-  id: create-thread
-  attributes:
-    label: "Add a reply / Create a thread"
-    description: "Check this if the plan is to create a thread."
-    options:
-      - label: "Yes, I want to add another tweet as a reply."
+  - type: checkboxes
+    id: create-thread
+    attributes:
+      label: "Add a reply / Create a thread"
+      description: "Check this if the plan is to create a thread."
+      options:
+        - label: "Yes, I want to add another tweet as a reply."
 
-- type: textarea
-  id: additional-tweet-content
-  attributes:
-    label: "Additional Tweet Content"
-    description: "Write the content of your additional tweet for the thread here. (Optional)"
-    placeholder: "Enter additional tweet content. For multiple replies, separate each tweet with a line break including the characters '---'.
-    
-    Example:
-    This is the first reply
-    ---
-    This is the second reply"
-  validations:
-    required: false   
+  - type: textarea
+    id: additional-tweet-content
+    attributes:
+      label: "Additional Tweet Content"
+      description: "Write the content of your additional tweet for the thread here. (Optional) For multiple replies, separate each tweet with a line break including the characters '---'. Example: This is the first reply --- This is the second reply"
+      placeholder: "Enter additional tweet content"
+    validations:
+      required: false
 
   - type: checkboxes
     id: tweet-media
@@ -85,7 +80,6 @@ body:
       description: "Check if there will be media or an image with the tweet."
       options:
         - label: "Yes"
-          required: false
 
   - type: textarea
     id: add-media
@@ -95,5 +89,3 @@ body:
       placeholder: "📎"
     validations:
       required: false
-
- 
