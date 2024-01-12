@@ -12,7 +12,7 @@ jobs:
       - name: Add Issue to Project
         uses: srggrs/assign-one-project-github-action@1.2.1
         with:
-          project: '1'
+          project: 'https://github.com/users/coinselor/projects/1'
           column_name: 'Draft Phase'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
